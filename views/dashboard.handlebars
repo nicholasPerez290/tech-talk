@@ -4,19 +4,13 @@
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li> <a id="myNewPost" href="/newpost"><span id="plus">&#43;</span> New Post</a></li>
         <li><a href="/signup">Sign-Up</a></li>
-        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/">Home</a></li>
       </ul>
     </div>
   </nav>
-  <div class="card-container">
+<h1 class="myPosts">{{user_name}}</h1>
+  <div class="dashboard-container">
     {{#each blogs as |blog|}}
-  {{>home-details}}
-  {{/each}}
+    {{>dashboard-details}}
+    {{/each}}
   </div>
-  <script>
-    let cards = document.querySelectorAll('.comment-form')
-    for(let i = 0; i < cards.length; i++){
-      cards[i].setAttribute('id', (i + 1))
-    }
-  </script>
-  <script src="js/newComment.js"></script>

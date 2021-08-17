@@ -2,18 +2,25 @@
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Tech Talk</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="/signup">Sign-up</a></li>
+        <li><a href="/login">Log-in</a></li>
         <li><a href="/dashboard">Dashboard</a></li>
       </ul>
     </div>
   </nav>
   <div class="signupForm">
-  <h1>Log-In</h1>
-  <form action="" class="login-form">
+  <h1>Sign-Up</h1>
+  <form action="">
       <div class="row">
         <div class="input-field col s12">
-          <input id="email-username" type="text">
-          <label for="email-username">Username</label>
+          <input id="username" type="text" class="validate">
+          <label for="username">Username</label>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
         </div>
       </div>
       <div class="row">
@@ -22,8 +29,8 @@
           <label for="password">Password</label>
         </div>
       </div>
-        <button id="sign-btn" class="waves-effect waves-light btn">Submit</button>
+      <button id="sign-btn" class="waves-effect waves-light btn">Submit</button>
     </form>
   </div>
-  <script src="js/login.js"></script>
   </div>
+  <script src="\js\signup.js"></script>

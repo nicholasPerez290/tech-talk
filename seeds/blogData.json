@@ -1,0 +1,20 @@
+[
+    {
+        "title": "My Tech",
+        "blog_content": "Tech is so great!!!",
+        "date": "2020-03-20",
+        "user_id": 1
+    },
+    {
+        "title": "Your Tech",
+        "blog_content": "Tech is the great!!!",
+        "date": "2020-03-20",
+        "user_id": 2
+    },
+    {
+        "title": "Our Tech",
+        "blog_content": "Tech is the bomb great!!!",
+        "date": "2020-03-20",
+        "user_id": 3
+    }
+]
