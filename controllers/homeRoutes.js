@@ -1,8 +1,11 @@
 const router = require('express').Router();
 const { Blog, User, Comment } = require('../models');
-const Auth = require('../utils/auth');
-router.get('/', async (req, res) => {
+const withAuth = require('../utils/auth');
+router.get('/', withAuth, async (req, res) => {
     try {
+      if (!req.session.logged_in){
+        
+      }
         const blogData = await Blog.findAll({
           include: [
             {
@@ -38,7 +41,7 @@ router.get('/signup', (req, res) => {
 router.get('/newpost', (req, res) => {
   res.render('newPost')
 })
-router.get('/dashboard', async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
   const userData = await User.findByPk(req.session.user_id, {
     attributes: { exclude: ['password'] },
     include: [{ model: Blog }],
